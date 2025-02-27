@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+}
+.container {
+    max-width: 500px;
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+.container .title {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+.container .title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    border-radius: 5px;
+    background-color:#000000;
+}
+form .user-details {
+    margin: 20px 0 12px 0;
+}
+form .input-box {
+    margin-bottom: 15px;
+    width: 100%;
+}
+form .input-box span.details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+form .user-details .input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+form .user-details .input-box input:focus,
+form .user-details .input-box input:valid {
+    border-color: #000000;
+}
+form .gender-details .gender-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+form .category {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 14px;
+}
+form .category label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+form .category label .dot {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background: #d9d9d9;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+form input[type="radio"]:checked + .dot {
+    background: #000000;
+    border-color: #d9d9d9;
+}
+form .button {
+    height: 45px;
+    margin: 35px 0;
+}
+form .button input {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #000000;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+form .button input:hover {
+    background-color: #000000;
+}
+@media(max-width: 584px) {
+    .container {
+        max-width: 100%;
+    }
+}
